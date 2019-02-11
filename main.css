@@ -1,6 +1,6 @@
 body {
   height: 100%; 
-  background-image:url(images/backhround-image.jpeg);
+  background-image:url(images/mountaineer.jpg);
   background-size: cover;  
   background-position:top;
   background-repeat: no-repeat; 
@@ -8,7 +8,7 @@ body {
 
 .inner {
   width: 400px;
-  margin-left: auto;
+  margin-right: auto;
   background-color: rgba(0, 0, 0, 0.6); 
   border-radius: 15px; 
   padding: 15px;
@@ -17,7 +17,7 @@ body {
 
 .clubdb {
   width: auto;
-  margin-left: auto;
+  margin-right: auto;
   background-color: rgba(0, 0, 0, 0.6); 
   border-radius: 15px; 
   padding: 15px;
