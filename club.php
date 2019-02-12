@@ -27,11 +27,11 @@ try {
 			<thead>
 				<th> Name </th>
 				<th> Email </th>
-				<th> city </th>
-				<th> skill </th>
-				<th> experience </th>
-				<th> Edit? </th>
-				<th> Delete? </th>
+				<th> City </th>
+				<th> Skill Self-Assess </th>
+				<th> Experience </th>
+				<th> Edit </th>
+				<th> Delete </th>
 			</thead>
 			<tbody>';
 
