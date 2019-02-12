@@ -15,7 +15,8 @@
           $email =  filter_input(INPUT_POST, 'email');
           $city =  filter_input(INPUT_POST, 'city');
           $skill =  filter_input(INPUT_POST, 'skill');
-          $experience =  filter_input(INPUT_POST, 'experience', FILTER_VALIDATE_INT);
+          $experience =  filter_input(INPUT_POST, 'experience');
+          // $experience =  filter_input(INPUT_POST, 'experience', FILTER_VALIDATE_INT);
           
           if(empty($name)) {
             $ok = false; 
