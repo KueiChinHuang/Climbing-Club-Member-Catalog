@@ -56,7 +56,7 @@ if (!empty($_GET['id']) && (is_numeric($_GET['id']))) {
           <input type="text" name="skill" class="form-control" placeholder="Your skill" value="<?php echo $skill ?>">
         </div>
         <div class="form-group">
-          <input type="text" name="experience" class="form-control" placeholder="Your experience" value="<?php echo $experience ?>">
+          <input type="text" name="experience" class="form-control" placeholder="How long have you been climbing?" value="<?php echo $experience ?>">
         </div>
         <!-- need t add this hidden input s we knw which recrd we are deleting ! -->
           <input type="hidden" value="<?php echo $id ?>" name="id">
