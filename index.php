@@ -56,9 +56,9 @@ if (!empty($_GET['id']) && (is_numeric($_GET['id']))) {
           <input type="text" name="skill" class="form-control" placeholder="Assess your climbing skill (1 - 10)" value="<?php echo $skill ?>">
         </div>
         <div class="form-group">
-          <select name="experience">
+         <!--  <select name="experience"  onchange="this.style.color='#555'">
             <option disabled selected value>How long have you been climbing?</option>
-            <option value="0">Never climb before</option>
+            <option value="Never climb before">Never climb before</option>
             <option value="Under 3 months">Under 3 months</option>
             <option value="3-6 months">3-6 months</option>
             <option value="6 months - 1 years">6 months - 1 years</option>
@@ -66,7 +66,32 @@ if (!empty($_GET['id']) && (is_numeric($_GET['id']))) {
             <option value="2 - 5 years">2 - 5 years</option>
             <option value="5 - 10 years">5 - 10 years</option>
             <option value="Over 10 years">Over 10 years</option>
-          </select>
+          </select> -->
+
+<select name="experience"  onchange="this.style.color='#555'">
+<?php
+$theArray = array(
+  "How long have you been climbing?",
+  "Never climb before",
+  "Under 3 months",
+  "3 - 6 months",
+  "6 months - 1 years",
+  "1 year - 2 years",
+  "2 - 5 years",
+  "5 - 10 years",
+  "Over 10 years"
+);
+
+foreach ($theArray as $value) {
+    if ($value == $experience) {
+        echo('<option selected="selected" value="'.$value.'">'.$value.'</option>');
+    } else {
+        echo('<option value="'.$value.'">'.$value.'</option>');
+    }
+}
+?>
+</select>
+
         </div>
         <!-- need t add this hidden input so we know which record we are deleting ! -->
           <input type="hidden" value="<?php echo $id ?>" name="id">

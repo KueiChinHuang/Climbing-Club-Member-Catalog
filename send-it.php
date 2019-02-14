@@ -63,13 +63,16 @@ if(isset($_POST['submit'])){
       }
     }
 
-    if (empty($skill)) {
+    if ($skill == 0 ){
+      $ok = true; 
+    } else if (empty($skill)) {
       $ok = false; 
       echo '<p>Skill is required</p>';
     } else if (!filter_var($skill, FILTER_VALIDATE_INT)) {
       $ok = false; 
       echo '<p>Invalid skill format</p>'; 
-    } else if ($skill < 1 || $skill > 10 ) {
+    } 
+    else if ($skill < 0 || $skill > 10 ) {
       $ok = false; 
       echo '<p>Invalid skill level</p>'; 
     }
