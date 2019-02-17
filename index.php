@@ -44,13 +44,13 @@ if (!empty($_GET['id']) && (is_numeric($_GET['id']))) {
      <p> Welcome to join Georgian Climbing Club!</p>
       <form method="post" action="send-it.php">
         <div class="form-group">
-          <input type="text" name="name" class="form-control" placeholder="What's Your Name" value="<?php echo $name ?>">
+          <input type="text" name="name" class="form-control" placeholder="What's Your Name?" value="<?php echo $name ?>">
         </div>
         <div class="form-group">
           <input type="text" name="email" class="form-control" placeholder="Your Eamil?"value="<?php echo $email ?>">
         </div>
         <div class="form-group">
-          <input type="text" name="city" class="form-control" placeholder="Your city" value="<?php echo $city ?>">
+          <input type="text" name="city" class="form-control" placeholder="Your city?" value="<?php echo $city ?>">
         </div>
         <div class="form-group">
           <input type="text" name="skill" class="form-control" placeholder="Assess your climbing skill (1 - 10)" value="<?php echo $skill ?>">

@@ -33,7 +33,7 @@ if(isset($_POST['submit'])){
     } else {
       $name = test_input($name);
       // check if name only contains letters and whitespace
-      if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+      if (!preg_match("/^[a-zA-Z- ]*$/",$name)) {
         $ok = false; 
         echo "<p>Only letters and white space allowed in Name</p>"; 
       }
@@ -57,24 +57,24 @@ if(isset($_POST['submit'])){
     } else {
       $city = test_input($city);
       // check if city only contains letters and whitespace
-      if (!preg_match("/^[a-zA-Z ]*$/",$city)) {
+      if (!preg_match("/^[a-zA-Z]*$/",$city)) {
         $ok = false; 
-        echo "<p>Only letters and white space allowed in City</p>"; 
+        echo "<p>Only letters allowed in City</p>"; 
       }
     }
 
-    if ($skill == 0 ){
+    if ($skill === '0' ){
       $ok = true; 
     } else if (empty($skill)) {
       $ok = false; 
       echo '<p>Skill is required</p>';
     } else if (!filter_var($skill, FILTER_VALIDATE_INT)) {
       $ok = false; 
-      echo '<p>Invalid skill format</p>'; 
+      echo '<p>Only integer 1 - 10 allowed in Skill</p>'; 
     } 
     else if ($skill < 0 || $skill > 10 ) {
       $ok = false; 
-      echo '<p>Invalid skill level</p>'; 
+      echo '<p>Only integer 0 - 10 allowed in Skill</p>'; 
     }
 
     if(empty($experience)) {
